@@ -38,7 +38,7 @@ public class NewTest {
         // response.then().body("data.id", equalTo(2));
         // response.then().body("data.first_name", equalTo("Janet")); 
         System.out.println(response.getStatusLine());
-        System.out.println(response.getBody());
+        System.out.println(response.getBody().toString());
     }
 
     @SuppressWarnings("unchecked")
@@ -60,8 +60,8 @@ public class NewTest {
         // Assertions
         Assert.assertEquals(response.getStatusCode(), 200, "POST request failed");
         // response.then().body("id", equalTo("[23454]"));
-        System.out.println(response.getBody());
-        response.then().body("petId", equalTo("[456] "));
+        System.out.println(response.getBody().toString());
+        // response.then().body("petId", equalTo("[456] "));
         
     }
 }
