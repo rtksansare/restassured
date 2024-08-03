@@ -59,9 +59,9 @@ public class NewTest {
 
         // Assertions
         Assert.assertEquals(response.getStatusCode(), 200, "POST request failed");
-        // response.then().body("id", equalTo("[23454]"));
-        System.out.println(response.getBody().toString());
-        // response.then().body("petId", equalTo("[456] "));
+        response.then().body("id", equalTo(23454));
+        response.then().body("petId", equalTo(456));
+        response.then().body("status", equalTo("placed"));
         
     }
 }
